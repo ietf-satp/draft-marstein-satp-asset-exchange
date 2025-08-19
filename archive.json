@@ -1,0 +1,83 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2025-08-19T01:43:17.541871+00:00",
+  "repo": "ietf-satp/draft-ietf-satp-asset-exchange",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [],
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDOPdSz586kFcvl",
+      "title": "Checking in an initial skeleton of the Secure Asset Exchange Protocol draft",
+      "url": "https://github.com/ietf-satp/draft-ietf-satp-asset-exchange/pull/1",
+      "state": "MERGED",
+      "author": "VRamakrishna",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-08-18T11:12:14Z",
+      "updatedAt": "2025-08-18T11:12:56Z",
+      "baseRepository": "ietf-satp/draft-ietf-satp-asset-exchange",
+      "baseRefName": "main",
+      "baseRefOid": "b72d7d4f6f37f772d6f5a838ebb93012a962a8f5",
+      "headRepository": "VRamakrishna/draft-ietf-satp-asset-exchange",
+      "headRefName": "main",
+      "headRefOid": "97d1d753256fc42d74950642634f8ac710e163be",
+      "closedAt": "2025-08-18T11:12:55Z",
+      "mergedAt": "2025-08-18T11:12:55Z",
+      "mergedBy": "VRamakrishna",
+      "mergeCommit": {
+        "oid": "689298d08b69c412ed21588225af9077c9f66bba"
+      },
+      "comments": [],
+      "reviews": []
+    }
+  ]
+}

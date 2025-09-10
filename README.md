@@ -1,17 +1,17 @@
-# Secure Asset Transfer (SAT) Use Cases
+# Secure Asset Exchange Protocol
 
-This is the working area for the IETF [SATP Working Group](https://datatracker.ietf.org/wg/satp/documents/) Internet-Draft, "Secure Asset Transfer (SAT) Use Cases".
+This is the working area for the IETF [SATP Working Group](https://datatracker.ietf.org/wg/satp/documents/) Internet-Draft, "Secure Asset Exchange Protocol".
 
-* [Editor's Copy](https://ietf-satp.github.io/draft-ietf-satp-usecases/#go.draft-ietf-satp-usecases.html)
-* [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-satp-usecases)
-* [Working Group Draft](https://datatracker.ietf.org/doc/html/draft-ietf-satp-usecases)
-* [Compare Editor's Copy to Working Group Draft](https://ietf-satp.github.io/draft-ietf-satp-usecases/#go.draft-ietf-satp-usecases.diff)
+* [Editor's Copy](https://ietf-satp.github.io/draft-ietf-satp-asset-exchange/#go.draft-ietf-satp-asset-exchange.html)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-satp-asset-exchange)
+* [Working Group Draft](https://datatracker.ietf.org/doc/html/draft-ietf-satp-asset-exchange)
+* [Compare Editor's Copy to Working Group Draft](https://ietf-satp.github.io/draft-ietf-satp-asset-exchange/#go.draft-ietf-satp-asset-exchange.diff)
 
 
 ## Contributing
 
 See the
-[guidelines for contributions](https://github.com/ietf-satp/draft-ietf-satp-usecases/blob/main/CONTRIBUTING.md).
+[guidelines for contributions](https://github.com/ietf-satp/draft-ietf-satp-asset-exchange/blob/main/CONTRIBUTING.md).
 
 Contributions can be made by creating pull requests.
 The GitHub interface supports creating pull requests using the Edit (✏) button.

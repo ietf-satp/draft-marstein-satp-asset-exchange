@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-09-09T01:37:54.844998+00:00",
+  "timestamp": "2025-09-11T01:37:16.728701+00:00",
   "repo": "ietf-satp/draft-ietf-satp-asset-exchange",
   "labels": [
     {
@@ -84,7 +84,7 @@
       "id": "PR_kwDOPdSz586nCT6s",
       "title": "Updated README with appropriate titles and links",
       "url": "https://github.com/ietf-satp/draft-ietf-satp-asset-exchange/pull/2",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "VRamakrishna",
       "authorAssociation": "COLLABORATOR",
       "assignees": [
@@ -94,19 +94,35 @@
       "labels": [],
       "body": "Correcting text in README, which was copied from a different repository earlier.",
       "createdAt": "2025-09-05T12:09:35Z",
-      "updatedAt": "2025-09-05T12:09:35Z",
+      "updatedAt": "2025-09-10T08:30:56Z",
       "baseRepository": "ietf-satp/draft-ietf-satp-asset-exchange",
       "baseRefName": "main",
       "baseRefOid": "689298d08b69c412ed21588225af9077c9f66bba",
       "headRepository": "VRamakrishna/draft-ietf-satp-asset-exchange",
       "headRefName": "main",
       "headRefOid": "4ac70e7eec54428bae33015bc92de2ae8651bbbe",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-09-10T08:30:56Z",
+      "mergedAt": "2025-09-10T08:30:56Z",
+      "mergedBy": "alexchiriac",
+      "mergeCommit": {
+        "oid": "b2985671c2b595a4bc354187de1183de33aded6b"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOPdSz586_CV5Z",
+          "commit": {
+            "abbreviatedOid": "4ac70e7"
+          },
+          "author": "alexchiriac",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-09-10T08:30:49Z",
+          "updatedAt": "2025-09-10T08:30:49Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }

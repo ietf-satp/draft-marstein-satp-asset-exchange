@@ -5,11 +5,11 @@
 Secure Asset Transfer Protocol                               K. Marstein
 Internet-Draft                                                  Cathmere
 Intended status: Informational                                A. Chiriac
-Expires: 15 March 2026                                          L. Riley
+Expires: 22 March 2026                                          L. Riley
                                                            Quant Network
                                                           V. Ramakrishna
                                                             IBM Research
-                                                       11 September 2025
+                                                       18 September 2025
 
 
           Secure Asset Transfer Protocol (SATP) Asset Exchange
@@ -57,7 +57,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 15 March 2026.
+   This Internet-Draft will expire on 22 March 2026.
 
 Copyright Notice
 
@@ -135,8 +135,8 @@ Table of Contents
    borrow terminology from [NIST] and [ISO] where possible, introducing
    new terms only when needed:
 
-   *  Digital asset: digital representation of a value or of a right
-      that is able to be transferred and stored electronically using
+   *  Digital asset: A digital representation of a value or of a right
+      that can be transferred and stored electronically using
       distributed ledger technology or similar technology [MICA].
 
    *  Asset network (system): The network or system where a digital
@@ -146,17 +146,12 @@ Table of Contents
       transfer (move) a digital asset from one network to another using
       gateways.
 
-   *  Data sharing: The process, using the Asset Transfer Protocol, by
-      which one or more units of verifiably authentic data are
-      communicated from an Origin network to a Destination network,
-      either voluntarily or upon request.
-
-   *  Asset Transfer: A fail-safe process of moving an asset from one
+   *  Asset transfer: A fail-safe process of moving an asset from one
       network to another, with the destruction of the asset in the
-      Origin network and its recreation in the Destination network
+      origin network and its recreation in the destination network
       occurring as a single atomic action.
 
-   *  Asset Exchange: A fail-safe process of exchanging (or swapping)
+   *  Asset exchange: A fail-safe process of exchanging (or swapping)
       assets held by a pair of owners, each asset being maintained in a
       different network, with the two in-network transfers occurring as
       a single atomic action.
@@ -176,6 +171,14 @@ Table of Contents
    exchange mode.  The asset exchange protocol inherits the SATP model
    and behavior where not otherwise stated.  The reader is directed to
    [SATP] for further discussion of SATP and non-modified behavior.
+
+   While several variations of the message flows can be used to support
+   a gateway-to-gateway asset exchange protcol, a conscious design
+   choice is to diverge as little as possible from the asset transfer
+   version of SATP by reusing established definitions, semantics, and
+   security guarantees where possible.  This allows the protocol to
+   leverage the progress of SATP and simplifies integration with
+   existing SATP compliant systems.
 
    The gateway referred to as the "sender gateway" in SATP takes on the
    role as "initiating" gateway of the asset exchange, and the gateway
@@ -322,9 +325,13 @@ Table of Contents
 
    The initiating gateway proposes the set of transfer parameters and
    asset-related artifacts for the exchange to the receiving gateway.
-   The parameters are contained in the Transfer Initiation Claim.  The
-   asset exchange protocol requires two Transfer Initiation Claims, one
-   for each asset involved in the exchange.
+   The parameters are contained in the Transfer Initiation Claim.
+
+   The asset exchange protocol requires two Transfer Initiation Claims,
+   one for each asset involved in the exchange.  The inclusion of two
+   Transfer Initiation Claims in the proposal signals to the receiving
+   gateway that the session should be conducted using the asset exchange
+   version of SATP.
 
    The reader is directed to [SATP] for further discussion of Stage-1.
 

@@ -1053,7 +1053,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Marstein, et al.</td>
-<td class="center">Expires 15 March 2026</td>
+<td class="center">Expires 22 March 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1066,12 +1066,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ietf-satp-asset-exchange-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-09-11" class="published">11 September 2025</time>
+<time datetime="2025-09-18" class="published">18 September 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-03-15">15 March 2026</time></dd>
+<dd class="expires"><time datetime="2026-03-22">22 March 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1135,7 +1135,7 @@ Gateways that support SATP can be extended to also support the asset exchange mo
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 15 March 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 22 March 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1271,8 +1271,7 @@ The reader is directed to <span>[<a href="#SATU" class="cite xref">SATU</a>]</sp
 </div>
 <ul class="normal">
 <li class="normal" id="section-2-2.1">
-          <p id="section-2-2.1.1">Digital asset: digital representation of a value or of a right that is able to be
-transferred and stored electronically using distributed ledger technology or similar technology <span>[<a href="#MICA" class="cite xref">MICA</a>]</span>.<a href="#section-2-2.1.1" class="pilcrow">¶</a></p>
+          <p id="section-2-2.1.1">Digital asset: A digital representation of a value or of a right that can be transferred and stored electronically using distributed ledger technology or similar technology <span>[<a href="#MICA" class="cite xref">MICA</a>]</span>.<a href="#section-2-2.1.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-2-2.2">
           <p id="section-2-2.2.1">Asset network (system): The network or system where a digital asset is utilized.<a href="#section-2-2.2.1" class="pilcrow">¶</a></p>
@@ -1281,13 +1280,10 @@ transferred and stored electronically using distributed ledger technology or sim
           <p id="section-2-2.3.1">Secure Asset Transfer Protocol (SATP): The protocol used to transfer (move) a digital asset from one network to another using gateways.<a href="#section-2-2.3.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-2-2.4">
-          <p id="section-2-2.4.1">Data sharing: The process, using the Asset Transfer Protocol, by which one or more units of verifiably authentic data are communicated from an Origin network to a Destination network, either voluntarily or upon request.<a href="#section-2-2.4.1" class="pilcrow">¶</a></p>
+          <p id="section-2-2.4.1">Asset transfer: A fail-safe process of moving an asset from one network to another, with the destruction of the asset in the origin network and its recreation in the destination network occurring as a single atomic action.<a href="#section-2-2.4.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-2-2.5">
-          <p id="section-2-2.5.1">Asset Transfer: A fail-safe process of moving an asset from one network to another, with the destruction of the asset in the Origin network and its recreation in the Destination network occurring as a single atomic action.<a href="#section-2-2.5.1" class="pilcrow">¶</a></p>
-</li>
-        <li class="normal" id="section-2-2.6">
-          <p id="section-2-2.6.1">Asset Exchange: A fail-safe process of exchanging (or swapping) assets held by a pair of owners, each asset being maintained in a different network, with the two in-network transfers occurring as a single atomic action.<a href="#section-2-2.6.1" class="pilcrow">¶</a></p>
+          <p id="section-2-2.5.1">Asset exchange: A fail-safe process of exchanging (or swapping) assets held by a pair of owners, each asset being maintained in a different network, with the two in-network transfers occurring as a single atomic action.<a href="#section-2-2.5.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 </section>
@@ -1309,8 +1305,10 @@ The protocol intends to have a low barrier of adoption in systems that already i
 <p id="section-3.1-2">This document presents the modifications necessary to the SATP message flows and to the asset network actions to support the asset exchange mode.
 The asset exchange protocol inherits the SATP model and behavior where not otherwise stated.
 The reader is directed to <span>[<a href="#SATP" class="cite xref">SATP</a>]</span> for further discussion of SATP and non-modified behavior.<a href="#section-3.1-2" class="pilcrow">¶</a></p>
-<p id="section-3.1-3">The gateway referred to as the "sender gateway" in SATP takes on the role as "initiating" gateway of the asset exchange, and the gateway referred to as the "recipient gateway" takes on the role as "receiving" gateway, referring to each gateway's role in initiating the exchange.
-The protocol defines API endpoints, resources and identifier definitions, and message flows used in orchestrating the asset exchange between the two gateways.<a href="#section-3.1-3" class="pilcrow">¶</a></p>
+<p id="section-3.1-3">While several variations of the message flows can be used to support a gateway-to-gateway asset exchange protcol, a conscious design choice is to diverge as little as possible from the asset transfer version of SATP by reusing established definitions, semantics, and security guarantees where possible.
+This allows the protocol to leverage the progress of SATP and simplifies integration with existing SATP compliant systems.<a href="#section-3.1-3" class="pilcrow">¶</a></p>
+<p id="section-3.1-4">The gateway referred to as the "sender gateway" in SATP takes on the role as "initiating" gateway of the asset exchange, and the gateway referred to as the "recipient gateway" takes on the role as "receiving" gateway, referring to each gateway's role in initiating the exchange.
+The protocol defines API endpoints, resources and identifier definitions, and message flows used in orchestrating the asset exchange between the two gateways.<a href="#section-3.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="stages-of-the-protocol">
@@ -1461,9 +1459,10 @@ The initiating gateway G1 must assign (unlock) the asset in network NW1 to the c
 <p id="section-4.1-1">This section describes the transfer initiation stage, where the initiating gateway and the receiving gateway prepare for the start of the asset exchange.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
 </div>
 <p id="section-4.1-2">The initiating gateway proposes the set of transfer parameters and asset-related artifacts for the exchange to the receiving gateway.
-The parameters are contained in the Transfer Initiation Claim.
-The asset exchange protocol requires two Transfer Initiation Claims, one for each asset involved in the exchange.<a href="#section-4.1-2" class="pilcrow">¶</a></p>
-<p id="section-4.1-3">The reader is directed to <span>[<a href="#SATP" class="cite xref">SATP</a>]</span> for further discussion of Stage-1.<a href="#section-4.1-3" class="pilcrow">¶</a></p>
+The parameters are contained in the Transfer Initiation Claim.<a href="#section-4.1-2" class="pilcrow">¶</a></p>
+<p id="section-4.1-3">The asset exchange protocol requires two Transfer Initiation Claims, one for each asset involved in the exchange.
+The inclusion of two Transfer Initiation Claims in the proposal signals to the receiving gateway that the session should be conducted using the asset exchange version of SATP.<a href="#section-4.1-3" class="pilcrow">¶</a></p>
+<p id="section-4.1-4">The reader is directed to <span>[<a href="#SATP" class="cite xref">SATP</a>]</span> for further discussion of Stage-1.<a href="#section-4.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="lock-assertion-stage-stage-2">

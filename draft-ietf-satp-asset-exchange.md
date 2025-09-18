@@ -204,18 +204,15 @@ The reader is directed to {{SATU}} for further discussion of the use cases enabl
 
 The following are some terminology used in the current document. We borrow terminology from {{NIST}} and {{ISO}} where possible, introducing new terms only when needed:
 
-- Digital asset: digital representation of a value or of a right that is able to be
-  transferred and stored electronically using distributed ledger technology or similar technology {{MICA}}.
+- Digital asset: A digital representation of a value or of a right that can be transferred and stored electronically using distributed ledger technology or similar technology {{MICA}}.
 
 - Asset network (system): The network or system where a digital asset is utilized.
 
 - Secure Asset Transfer Protocol (SATP): The protocol used to transfer (move) a digital asset from one network to another using gateways.
 
-- Data sharing: The process, using the Asset Transfer Protocol, by which one or more units of verifiably authentic data are communicated from an Origin network to a Destination network, either voluntarily or upon request.
+- Asset transfer: A fail-safe process of moving an asset from one network to another, with the destruction of the asset in the origin network and its recreation in the destination network occurring as a single atomic action.
 
-- Asset Transfer: A fail-safe process of moving an asset from one network to another, with the destruction of the asset in the Origin network and its recreation in the Destination network occurring as a single atomic action.
-
-- Asset Exchange: A fail-safe process of exchanging (or swapping) assets held by a pair of owners, each asset being maintained in a different network, with the two in-network transfers occurring as a single atomic action.
+- Asset exchange: A fail-safe process of exchanging (or swapping) assets held by a pair of owners, each asset being maintained in a different network, with the two in-network transfers occurring as a single atomic action.
 
 # Asset Exchange Extension
 
@@ -231,6 +228,9 @@ The protocol intends to have a low barrier of adoption in systems that already i
 This document presents the modifications necessary to the SATP message flows and to the asset network actions to support the asset exchange mode.
 The asset exchange protocol inherits the SATP model and behavior where not otherwise stated.
 The reader is directed to {{SATP}} for further discussion of SATP and non-modified behavior.
+
+While several variations of the message flows can be used to support a gateway-to-gateway asset exchange protcol, a conscious design choice is to diverge as little as possible from the asset transfer version of SATP by reusing established definitions, semantics, and security guarantees where possible.
+This allows the protocol to leverage the progress of SATP and simplifies integration with existing SATP compliant systems.
 
 The gateway referred to as the "sender gateway" in SATP takes on the role as "initiating" gateway of the asset exchange, and the gateway referred to as the "recipient gateway" takes on the role as "receiving" gateway, referring to each gateway's role in initiating the exchange.
 The protocol defines API endpoints, resources and identifier definitions, and message flows used in orchestrating the asset exchange between the two gateways.
@@ -358,7 +358,9 @@ This section describes the transfer initiation stage, where the initiating gatew
 
 The initiating gateway proposes the set of transfer parameters and asset-related artifacts for the exchange to the receiving gateway.
 The parameters are contained in the Transfer Initiation Claim.
+
 The asset exchange protocol requires two Transfer Initiation Claims, one for each asset involved in the exchange.
+The inclusion of two Transfer Initiation Claims in the proposal signals to the receiving gateway that the session should be conducted using the asset exchange version of SATP.
 
 The reader is directed to {{SATP}} for further discussion of Stage-1.
 

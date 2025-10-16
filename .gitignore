@@ -17,7 +17,7 @@
 /versioned/
 Gemfile.lock
 archive.json
-draft-ietf-satp-asset-exchange.xml
+draft-marstein-satp-asset-exchange.xml
 package-lock.json
 report.xml
 !requirements.txt

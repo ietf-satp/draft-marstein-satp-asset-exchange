@@ -2,16 +2,16 @@
 
 This is the working area for the IETF [SATP Working Group](https://datatracker.ietf.org/wg/satp/documents/) Internet-Draft, "Secure Asset Transfer Protocol (SATP) Asset Exchange".
 
-* [Editor's Copy](https://ietf-satp.github.io/draft-ietf-satp-asset-exchange/#go.draft-ietf-satp-asset-exchange.html)
-* [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-satp-asset-exchange)
-* [Working Group Draft](https://datatracker.ietf.org/doc/html/draft-ietf-satp-asset-exchange)
-* [Compare Editor's Copy to Working Group Draft](https://ietf-satp.github.io/draft-ietf-satp-asset-exchange/#go.draft-ietf-satp-asset-exchange.diff)
+* [Editor's Copy](https://ietf-satp.github.io/draft-marstein-satp-asset-exchange/#go.draft-marstein-satp-asset-exchange.html)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-marstein-satp-asset-exchange)
+* [Working Group Draft](https://datatracker.ietf.org/doc/html/draft-marstein-satp-asset-exchange)
+* [Compare Editor's Copy to Working Group Draft](https://ietf-satp.github.io/draft-marstein-satp-asset-exchange/#go.draft-marstein-satp-asset-exchange.diff)
 
 
 ## Contributing
 
 See the
-[guidelines for contributions](https://github.com/ietf-satp/draft-ietf-satp-asset-exchange/blob/main/CONTRIBUTING.md).
+[guidelines for contributions](https://github.com/ietf-satp/draft-marstein-satp-asset-exchange/blob/main/CONTRIBUTING.md).
 
 Contributions can be made by creating pull requests.
 The GitHub interface supports creating pull requests using the Edit (✏) button.

@@ -17,7 +17,7 @@ pi:
 
 title: Secure Asset Transfer Protocol (SATP) Asset Exchange
 abbrev: SATP Asset Exchange
-docname: draft-ietf-satp-asset-exchange-latest
+docname: draft-marstein-satp-asset-exchange-latest
 category: info
 
 ipr: trust200902
@@ -33,8 +33,8 @@ venue:
   type: "Working Group"
   mail: "sat@ietf.org"
   arch: "https://mailarchive.ietf.org/arch/browse/sat/"
-  github: "ietf-satp/draft-ietf-satp-asset-exchange"
-  latest: "https://ietf-satp.github.io/draft-ietf-satp-asset-exchange/draft-ietf-satp-asset-exchange.html"
+  github: "ietf-satp/draft-marstein-satp-asset-exchange"
+  latest: "https://ietf-satp.github.io/draft-marstein-satp-asset-exchange/draft-marstein-satp-asset-exchange.html"
 
 author:
   -

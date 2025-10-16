@@ -5,15 +5,15 @@
 Secure Asset Transfer Protocol                               K. Marstein
 Internet-Draft                                                  Cathmere
 Intended status: Informational                                A. Chiriac
-Expires: 22 March 2026                                          L. Riley
+Expires: 19 April 2026                                          L. Riley
                                                            Quant Network
                                                           V. Ramakrishna
                                                             IBM Research
-                                                       18 September 2025
+                                                         16 October 2025
 
 
           Secure Asset Transfer Protocol (SATP) Asset Exchange
-                 draft-ietf-satp-asset-exchange-latest
+               draft-marstein-satp-asset-exchange-latest
 
 Abstract
 
@@ -30,9 +30,10 @@ About This Document
    This note is to be removed before publishing as an RFC.
 
    The latest revision of this draft can be found at https://ietf-
-   satp.github.io/draft-ietf-satp-asset-exchange/draft-ietf-satp-asset-
-   exchange.html.  Status information for this document may be found at
-   https://datatracker.ietf.org/doc/draft-ietf-satp-asset-exchange/.
+   satp.github.io/draft-marstein-satp-asset-exchange/draft-marstein-
+   satp-asset-exchange.html.  Status information for this document may
+   be found at https://datatracker.ietf.org/doc/draft-marstein-satp-
+   asset-exchange/.
 
    Discussion of this document takes place on the Secure Asset Transfer
    Protocol Working Group mailing list (mailto:sat@ietf.org), which is
@@ -40,7 +41,7 @@ About This Document
    at https://www.ietf.org/mailman/listinfo/sat/.
 
    Source for this draft and an issue tracker can be found at
-   https://github.com/ietf-satp/draft-ietf-satp-asset-exchange.
+   https://github.com/ietf-satp/draft-marstein-satp-asset-exchange.
 
 Status of This Memo
 
@@ -57,7 +58,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 22 March 2026.
+   This Internet-Draft will expire on 19 April 2026.
 
 Copyright Notice
 
@@ -521,7 +522,7 @@ Table of Contents
               Secure Asset Transfer Protocol for Secure Cross-Network
               Asset Exchange, IEEE ICBC Cross-Chain Workshop (ICBC-
               CCW)", June 2025,
-              <https://doi.org/10.36227/techrxiv.173202882.29071711/v3>.
+              <https://doi.org/10.1109/ICBC64466.2025.11185062>.
 
    [SATA]     Hardjono, T., Hargreaves, M., Smith, N., and V.
               Ramakrishna, "Secure Asset Transfer (SAT) Interoperability

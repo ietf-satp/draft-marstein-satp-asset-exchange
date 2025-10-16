@@ -122,7 +122,7 @@ normative:
     - ins: P. Davita
     - ins: L. Riley
     date: June 2025
-    target: https://doi.org/10.36227/techrxiv.173202882.29071711/v3
+    target: https://doi.org/10.1109/ICBC64466.2025.11185062
     title: Adapting the Secure Asset Transfer Protocol for Secure Cross-Network Asset Exchange, IEEE ICBC Cross-Chain Workshop (ICBC-CCW)
   ISO:
     author:

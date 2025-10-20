@@ -5,25 +5,26 @@
 Secure Asset Transfer Protocol                               K. Marstein
 Internet-Draft                                                  Cathmere
 Intended status: Informational                                A. Chiriac
-Expires: 19 April 2026                                          L. Riley
+Expires: 23 April 2026                                          L. Riley
                                                            Quant Network
                                                           V. Ramakrishna
                                                             IBM Research
-                                                         16 October 2025
+                                                         20 October 2025
 
 
-          Secure Asset Transfer Protocol (SATP) Asset Exchange
+                     Secure Asset Exchange Protocol
                draft-marstein-satp-asset-exchange-latest
 
 Abstract
 
-   This document describes an extension of the Secure Asset Transfer
-   Protocol (SATP) that enables the asset exchange interoperability
-   mode.  It specifies the required modifications necessary to the SATP
-   message flows to facilitate asset exchange between asset networks.
-   Gateways that support SATP can be extended to also support the asset
-   exchange mode, enabling support for both asset transfer and asset
-   exchange in a single set of gateways.
+   This document describes the Secure Asset Exchange (SAE) Protocol.
+   SAE is an extension of the Secure Asset Transfer (SAT) Protocol that
+   enables the asset exchange interoperability mode.  It specifies the
+   required modifications necessary to the SAT message flows to
+   facilitate asset exchange between asset networks.  Gateways that
+   support the SAT protocol can be extended to also support SAE,
+   enabling support for both asset transfer and asset exchange in a
+   single set of gateways.
 
 About This Document
 
@@ -58,7 +59,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 19 April 2026.
+   This Internet-Draft will expire on 23 April 2026.
 
 Copyright Notice
 
@@ -78,7 +79,7 @@ Table of Contents
 
    1.  Introduction
    2.  Terminology
-   3.  Asset Exchange Extension
+   3.  The Secure Asset Exchange Protocol
      3.1.  Overview
      3.2.  Stages of the Protocol
      3.3.  Message Types
@@ -102,19 +103,19 @@ Table of Contents
 
 1.  Introduction
 
-   This document presents an extension of the Secure Asset Transfer
-   (SAT) Protocol [SATP] that facilitates asset exchange between asset
-   networks.  The asset exchange protocol is a mediated cross-
-   authentication protocol for cross-network digital asset exchange.
-   SATP gateways can be extended to support the asset exchange mode,
-   enabling support for both the asset transfer and asset exchange
-   interoperability modes through a single set of gateways.  The reader
-   is directed to [SATA] for further discussion of the interoperability
-   modes recognized in SATP.
+   This document presents the Secure Asset Exchange Protocol (SAEP), an
+   extension of the Secure Asset Transfer (SAT) Protocol [SATP] that
+   facilitates asset exchange between asset networks.  The asset
+   exchange protocol is a mediated cross-authentication protocol for
+   cross-network digital asset exchange.  SATP gateways can be extended
+   to support the asset exchange mode, enabling support for both the
+   asset transfer and asset exchange interoperability modes through a
+   single set of gateways.  The reader is directed to [SATA] for further
+   discussion of the interoperability modes recognized in SATP.
 
-   The protocol uses a lock-and-assign pattern to facilitate the asset
-   exchange, where all assets included in the exchange are locked or
-   otherwise disabled within their respective networks before being
+   The SAE protocol uses a lock-and-assign pattern to facilitate the
+   asset exchange, where all assets included in the exchange are locked
+   or otherwise disabled within their respective networks before being
    assigned to the designated beneficiaries.  This process is
    coordinated by peer gateways, where each gateway is connected to one
    of the digital asset networks involved in the exchange.  The lock-
@@ -147,6 +148,10 @@ Table of Contents
       transfer (move) a digital asset from one network to another using
       gateways.
 
+   *  Secure Asset Exchange Protocol (SAEP): The protocol used to
+      exchange a digital asset in one network for a digital asset in
+      another network using gateways.
+
    *  Asset transfer: A fail-safe process of moving an asset from one
       network to another, with the destruction of the asset in the
       origin network and its recreation in the destination network
@@ -157,11 +162,11 @@ Table of Contents
       different network, with the two in-network transfers occurring as
       a single atomic action.
 
-3.  Asset Exchange Extension
+3.  The Secure Asset Exchange Protocol
 
 3.1.  Overview
 
-   The SAT asset exchange extension protocol is a gateway-to-gateway
+   The Secure Asset Exchange Protocol (SAEP) is a gateway-to-gateway
    protocol enabling cross-network digital asset exchange, first
    introduced in [SAEP].  The protocol intends to have a low barrier of
    adoption in systems that already implement SATP by potentially being
@@ -191,8 +196,7 @@ Table of Contents
 
 3.2.  Stages of the Protocol
 
-   The asset exchange protocol follows the same three message stages as
-   SATP:
+   The SAE protocol follows the same three message stages as SATP:
 
    *  Transfer Initiation stage (Stage-1): The gateways come to an
       agreement of the set of parameters describing the proposed
@@ -221,7 +225,8 @@ Table of Contents
    This refers to the type of request or response to be conveyed in the
    message.  The values are defined in [SATP].
 
-   The possible values for an asset exchange session are:
+   The possible values for an asset exchange session facilitated by SAEP
+   are:
 
    *  transfer-proposal-msg: The exchange proposal message sent by the
       gateway initiating the exchange.  The message contains the set of
@@ -272,8 +277,8 @@ Table of Contents
 
 4.  Modified Message Flows
 
-   The asset exchange protocol follows the same Stage-1 and Stage-2
-   message flows as [SATP].
+   The SAE protocol follows the same Stage-1 and Stage-2 message flows
+   as [SATP].
 
    Stage-1 flows pertain to the initialization of the transfer session
    between the two gateways.
@@ -328,11 +333,10 @@ Table of Contents
    asset-related artifacts for the exchange to the receiving gateway.
    The parameters are contained in the Transfer Initiation Claim.
 
-   The asset exchange protocol requires two Transfer Initiation Claims,
-   one for each asset involved in the exchange.  The inclusion of two
-   Transfer Initiation Claims in the proposal signals to the receiving
-   gateway that the session should be conducted using the asset exchange
-   version of SATP.
+   The SAE protocol requires two Transfer Initiation Claims, one for
+   each asset involved in the exchange.  The inclusion of two Transfer
+   Initiation Claims in the proposal signals to the receiving gateway
+   that the session should be conducted using SAEP as opposed to SATP.
 
    The reader is directed to [SATP] for further discussion of Stage-1.
 
@@ -381,10 +385,9 @@ Table of Contents
 
    The message must be signed by the server.
 
-   The asset exchange extension requires the message transmitted in this
-   step to be formatted as a lock-assert-msg instead of following the
-   commit-ready-msg format specified for this step in the asset transfer
-   version of SATP.
+   The SAE protocol requires the message transmitted in this step to be
+   formatted as a lock-assert-msg instead of following the commit-ready-
+   msg format specified for this step in SATP.
 
    The parameters of this message consist of the following:
 
@@ -433,10 +436,9 @@ Table of Contents
 
    The message must be signed by the client.
 
-   The asset exchange extension requires the message transmitted in this
-   step to be formatted as an ack-commit-final-msg instead of following
-   the commit-final-msg format specified for this step in the asset
-   transfer version of SATP.
+   The SAE protocol requires the message transmitted in this step to be
+   formatted as an ack-commit-final-msg instead of following the commit-
+   final-msg format specified for this step in SATP.
 
    The parameters of this message consist of the following:
 

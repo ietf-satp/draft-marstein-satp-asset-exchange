@@ -4,32 +4,31 @@
 <meta charset="utf-8">
 <meta content="Common,Latin" name="scripts">
 <meta content="initial-scale=1.0" name="viewport">
-<title>Secure Asset Transfer Protocol (SATP) Asset Exchange</title>
+<title>Secure Asset Exchange Protocol</title>
 <meta content="Kjell-Erik Marstein" name="author">
 <meta content="Alex Chiriac" name="author">
 <meta content="Luke Riley" name="author">
 <meta content="Venkatraman Ramakrishna" name="author">
 <meta content="
-       This document describes an extension of the Secure Asset Transfer Protocol (SATP) that enables the asset exchange interoperability mode.
-It specifies the required modifications necessary to the SATP message flows to facilitate asset exchange between asset networks.
-Gateways that support SATP can be extended to also support the asset exchange mode, enabling support for both asset transfer and asset exchange in a single set of gateways. 
+       This document describes the Secure Asset Exchange (SAE) Protocol. SAE is an extension of the Secure Asset Transfer (SAT) Protocol that enables the asset exchange interoperability mode.
+It specifies the required modifications necessary to the SAT message flows to facilitate asset exchange between asset networks.
+Gateways that support the SAT protocol can be extended to also support SAE, enabling support for both asset transfer and asset exchange in a single set of gateways. 
     " name="description">
-<meta content="xml2rfc 3.30.2" name="generator">
+<meta content="xml2rfc 3.31.0" name="generator">
 <meta content="Internet-Draft" name="keyword">
 <meta content="draft-marstein-satp-asset-exchange-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.30.2
-    Python 3.12.11
+  xml2rfc 3.31.0
+    Python 3.12.12
     ConfigArgParse 1.7
     google-i18n-address 3.1.1
     intervaltree 3.1.0
     Jinja2 3.1.6
     lxml 5.3.1
-    platformdirs 4.4.0
+    platformdirs 4.5.0
     pycountry 24.6.1
     PyYAML 6.0.2
     requests 2.32.5
-    setuptools 80.9.0
     wcwidth 0.2.14
 -->
 <link href="draft-marstein-satp-asset-exchange.xml" rel="alternate" type="application/rfc+xml">
@@ -1053,7 +1052,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Marstein, et al.</td>
-<td class="center">Expires 19 April 2026</td>
+<td class="center">Expires 23 April 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1066,12 +1065,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-marstein-satp-asset-exchange-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-10-16" class="published">16 October 2025</time>
+<time datetime="2025-10-20" class="published">20 October 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-04-19">19 April 2026</time></dd>
+<dd class="expires"><time datetime="2026-04-23">23 April 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1093,12 +1092,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </dd>
 </dl>
 </div>
-<h1 id="title">Secure Asset Transfer Protocol (SATP) Asset Exchange</h1>
+<h1 id="title">Secure Asset Exchange Protocol</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1">This document describes an extension of the Secure Asset Transfer Protocol (SATP) that enables the asset exchange interoperability mode.
-It specifies the required modifications necessary to the SATP message flows to facilitate asset exchange between asset networks.
-Gateways that support SATP can be extended to also support the asset exchange mode, enabling support for both asset transfer and asset exchange in a single set of gateways.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-1">This document describes the Secure Asset Exchange (SAE) Protocol. SAE is an extension of the Secure Asset Transfer (SAT) Protocol that enables the asset exchange interoperability mode.
+It specifies the required modifications necessary to the SAT message flows to facilitate asset exchange between asset networks.
+Gateways that support the SAT protocol can be extended to also support SAE, enabling support for both asset transfer and asset exchange in a single set of gateways.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
       <h2 id="name-about-this-document">
@@ -1135,7 +1134,7 @@ Gateways that support SATP can be extended to also support the asset exchange mo
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 19 April 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 23 April 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1171,7 +1170,7 @@ Gateways that support SATP can be extended to also support the asset exchange mo
             <p id="section-toc.1-1.2.1" class="keepWithNext"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-terminology" class="internal xref">Terminology</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3">
-            <p id="section-toc.1-1.3.1"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-asset-exchange-extension" class="internal xref">Asset Exchange Extension</a></p>
+            <p id="section-toc.1-1.3.1"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-the-secure-asset-exchange-p" class="internal xref">The Secure Asset Exchange Protocol</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.1">
                 <p id="section-toc.1-1.3.2.1.1" class="keepWithNext"><a href="#section-3.1" class="auto internal xref">3.1</a>.  <a href="#name-overview" class="internal xref">Overview</a></p>
@@ -1248,12 +1247,12 @@ Gateways that support SATP can be extended to also support the asset exchange mo
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
 <div id="introduction-doc">
-<p id="section-1-1">This document presents an extension of the Secure Asset Transfer (SAT) Protocol <span>[<a href="#SATP" class="cite xref">SATP</a>]</span> that facilitates asset exchange between asset networks.
+<p id="section-1-1">This document presents the Secure Asset Exchange Protocol (SAEP), an extension of the Secure Asset Transfer (SAT) Protocol <span>[<a href="#SATP" class="cite xref">SATP</a>]</span> that facilitates asset exchange between asset networks.
 The asset exchange protocol is a mediated cross-authentication protocol for cross-network digital asset exchange.
 SATP gateways can be extended to support the asset exchange mode, enabling support for both the asset transfer and asset exchange interoperability modes through a single set of gateways.
 The reader is directed to <span>[<a href="#SATA" class="cite xref">SATA</a>]</span> for further discussion of the interoperability modes recognized in SATP.<a href="#section-1-1" class="pilcrow">¶</a></p>
 </div>
-<p id="section-1-2">The protocol uses a lock-and-assign pattern to facilitate the asset exchange, where all assets included in the exchange are locked or otherwise disabled within their respective networks before being assigned to the designated beneficiaries.
+<p id="section-1-2">The SAE protocol uses a lock-and-assign pattern to facilitate the asset exchange, where all assets included in the exchange are locked or otherwise disabled within their respective networks before being assigned to the designated beneficiaries.
 This process is coordinated by peer gateways, where each gateway is connected to one of the digital asset networks involved in the exchange.
 The lock-and-assign pattern is used to facilitate atomicity, consistency, isolation, and durability (ACID) in the cross-network exchange process.<a href="#section-1-2" class="pilcrow">¶</a></p>
 <p id="section-1-3">The goal of this draft is to define an asset exchange protocol that builds upon the architectural and procedural foundations established in earlier SATP drafts (<span>[<a href="#SATA" class="cite xref">SATA</a>]</span>, <span>[<a href="#SATP" class="cite xref">SATP</a>]</span>).
@@ -1280,26 +1279,29 @@ The reader is directed to <span>[<a href="#SATU" class="cite xref">SATU</a>]</sp
           <p id="section-2-2.3.1">Secure Asset Transfer Protocol (SATP): The protocol used to transfer (move) a digital asset from one network to another using gateways.<a href="#section-2-2.3.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-2-2.4">
-          <p id="section-2-2.4.1">Asset transfer: A fail-safe process of moving an asset from one network to another, with the destruction of the asset in the origin network and its recreation in the destination network occurring as a single atomic action.<a href="#section-2-2.4.1" class="pilcrow">¶</a></p>
+          <p id="section-2-2.4.1">Secure Asset Exchange Protocol (SAEP): The protocol used to exchange a digital asset in one network for a digital asset in another network using gateways.<a href="#section-2-2.4.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-2-2.5">
-          <p id="section-2-2.5.1">Asset exchange: A fail-safe process of exchanging (or swapping) assets held by a pair of owners, each asset being maintained in a different network, with the two in-network transfers occurring as a single atomic action.<a href="#section-2-2.5.1" class="pilcrow">¶</a></p>
+          <p id="section-2-2.5.1">Asset transfer: A fail-safe process of moving an asset from one network to another, with the destruction of the asset in the origin network and its recreation in the destination network occurring as a single atomic action.<a href="#section-2-2.5.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="section-2-2.6">
+          <p id="section-2-2.6.1">Asset exchange: A fail-safe process of exchanging (or swapping) assets held by a pair of owners, each asset being maintained in a different network, with the two in-network transfers occurring as a single atomic action.<a href="#section-2-2.6.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 </section>
 </div>
-<div id="asset-exchange-extension">
+<div id="the-secure-asset-exchange-protocol">
 <section id="section-3">
-      <h2 id="name-asset-exchange-extension">
-<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-asset-exchange-extension" class="section-name selfRef">Asset Exchange Extension</a>
+      <h2 id="name-the-secure-asset-exchange-p">
+<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-the-secure-asset-exchange-p" class="section-name selfRef">The Secure Asset Exchange Protocol</a>
       </h2>
-<div id="asset-exchange-protocol">
+<div id="saep-protocol">
 <section id="section-3.1">
         <h3 id="name-overview">
 <a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-overview" class="section-name selfRef">Overview</a>
         </h3>
-<div id="asset-exchange-overview">
-<p id="section-3.1-1">The SAT asset exchange extension protocol is a gateway-to-gateway protocol enabling cross-network digital asset exchange, first introduced in <span>[<a href="#SAEP" class="cite xref">SAEP</a>]</span>.
+<div id="saep-overview">
+<p id="section-3.1-1">The Secure Asset Exchange Protocol (SAEP) is a gateway-to-gateway protocol enabling cross-network digital asset exchange, first introduced in <span>[<a href="#SAEP" class="cite xref">SAEP</a>]</span>.
 The protocol intends to have a low barrier of adoption in systems that already implement SATP by potentially being enabled through the same set of gateways.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
 </div>
 <p id="section-3.1-2">This document presents the modifications necessary to the SATP message flows and to the asset network actions to support the asset exchange mode.
@@ -1316,8 +1318,8 @@ The protocol defines API endpoints, resources and identifier definitions, and me
         <h3 id="name-stages-of-the-protocol">
 <a href="#section-3.2" class="section-number selfRef">3.2. </a><a href="#name-stages-of-the-protocol" class="section-name selfRef">Stages of the Protocol</a>
         </h3>
-<div id="asset-exchange-stages">
-<p id="section-3.2-1">The asset exchange protocol follows the same three message stages as SATP:<a href="#section-3.2-1" class="pilcrow">¶</a></p>
+<div id="saep-stages">
+<p id="section-3.2-1">The SAE protocol follows the same three message stages as SATP:<a href="#section-3.2-1" class="pilcrow">¶</a></p>
 </div>
 <ul class="normal">
 <li class="normal" id="section-3.2-2.1">
@@ -1338,11 +1340,11 @@ The protocol defines API endpoints, resources and identifier definitions, and me
         <h3 id="name-message-types">
 <a href="#section-3.3" class="section-number selfRef">3.3. </a><a href="#name-message-types" class="section-name selfRef">Message Types</a>
         </h3>
-<div id="asset-exchange-message-types">
+<div id="saep-message-types">
 <p id="section-3.3-1">This refers to the type of request or response to be conveyed in the message.
 The values are defined in <span>[<a href="#SATP" class="cite xref">SATP</a>]</span>.<a href="#section-3.3-1" class="pilcrow">¶</a></p>
 </div>
-<p id="section-3.3-2">The possible values for an asset exchange session are:<a href="#section-3.3-2" class="pilcrow">¶</a></p>
+<p id="section-3.3-2">The possible values for an asset exchange session facilitated by SAEP are:<a href="#section-3.3-2" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-3.3-3.1">
             <p id="section-3.3-3.1.1">transfer-proposal-msg: The exchange proposal message sent by the gateway initiating the exchange. The message contains the set of parameters proposed for the exchange.<a href="#section-3.3-3.1.1" class="pilcrow">¶</a></p>
@@ -1394,8 +1396,8 @@ The values are defined in <span>[<a href="#SATP" class="cite xref">SATP</a>]</sp
       <h2 id="name-modified-message-flows">
 <a href="#section-4" class="section-number selfRef">4. </a><a href="#name-modified-message-flows" class="section-name selfRef">Modified Message Flows</a>
       </h2>
-<div id="asset-exchange-flows">
-<p id="section-4-1">The asset exchange protocol follows the same Stage-1 and Stage-2 message flows as <span>[<a href="#SATP" class="cite xref">SATP</a>]</span>.<a href="#section-4-1" class="pilcrow">¶</a></p>
+<div id="saep-flows">
+<p id="section-4-1">The SAE protocol follows the same Stage-1 and Stage-2 message flows as <span>[<a href="#SATP" class="cite xref">SATP</a>]</span>.<a href="#section-4-1" class="pilcrow">¶</a></p>
 </div>
 <p id="section-4-2">Stage-1 flows pertain to the initialization of the transfer session between the two gateways.<a href="#section-4-2" class="pilcrow">¶</a></p>
 <p id="section-4-3">Stage-2 flows cover the conveyance of the signed assertion pertaining to the asset's locked status in network N1 connected to the initiating gateway G1.<a href="#section-4-3" class="pilcrow">¶</a></p>
@@ -1455,13 +1457,13 @@ The initiating gateway G1 must assign (unlock) the asset in network NW1 to the c
         <h3 id="name-transfer-initiation-stage-s">
 <a href="#section-4.1" class="section-number selfRef">4.1. </a><a href="#name-transfer-initiation-stage-s" class="section-name selfRef">Transfer Initiation Stage (Stage 1)</a>
         </h3>
-<div id="asset-exchange-stage1">
+<div id="saep-stage1">
 <p id="section-4.1-1">This section describes the transfer initiation stage, where the initiating gateway and the receiving gateway prepare for the start of the asset exchange.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
 </div>
 <p id="section-4.1-2">The initiating gateway proposes the set of transfer parameters and asset-related artifacts for the exchange to the receiving gateway.
 The parameters are contained in the Transfer Initiation Claim.<a href="#section-4.1-2" class="pilcrow">¶</a></p>
-<p id="section-4.1-3">The asset exchange protocol requires two Transfer Initiation Claims, one for each asset involved in the exchange.
-The inclusion of two Transfer Initiation Claims in the proposal signals to the receiving gateway that the session should be conducted using the asset exchange version of SATP.<a href="#section-4.1-3" class="pilcrow">¶</a></p>
+<p id="section-4.1-3">The SAE protocol requires two Transfer Initiation Claims, one for each asset involved in the exchange.
+The inclusion of two Transfer Initiation Claims in the proposal signals to the receiving gateway that the session should be conducted using SAEP as opposed to SATP.<a href="#section-4.1-3" class="pilcrow">¶</a></p>
 <p id="section-4.1-4">The reader is directed to <span>[<a href="#SATP" class="cite xref">SATP</a>]</span> for further discussion of Stage-1.<a href="#section-4.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -1470,7 +1472,7 @@ The inclusion of two Transfer Initiation Claims in the proposal signals to the r
         <h3 id="name-lock-assertion-stage-stage-">
 <a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-lock-assertion-stage-stage-" class="section-name selfRef">Lock Assertion Stage (Stage 2)</a>
         </h3>
-<div id="asset-exchange-stage2">
+<div id="saep-stage2">
 <p id="section-4.2-1">The messages in this stage pertain to the initiating gateway providing the receiving gateway with a signed assertion that the asset in network NW1 has been locked or disabled, and under the control of the initiating gateway.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
 </div>
 <p id="section-4.2-2">The reader is directed to <span>[<a href="#SATP" class="cite xref">SATP</a>]</span> for further discussion of Stage-2.<a href="#section-4.2-2" class="pilcrow">¶</a></p>
@@ -1481,7 +1483,7 @@ The inclusion of two Transfer Initiation Claims in the proposal signals to the r
         <h3 id="name-commitment-preparation-and-">
 <a href="#section-4.3" class="section-number selfRef">4.3. </a><a href="#name-commitment-preparation-and-" class="section-name selfRef">Commitment Preparation and Finalization (Stage 3)</a>
         </h3>
-<div id="asset-exchange-stage3">
+<div id="saep-stage3">
 <p id="section-4.3-1">This section describes the exchange commitment agreement between the client (initiating gateway) and the server (receiving gateway).<a href="#section-4.3-1" class="pilcrow">¶</a></p>
 </div>
 <p id="section-4.3-2">This stage must be completed within the time specified in the lockAssertionExpiration value in the lock-assertion or commit ready message, whichever is shortest.<a href="#section-4.3-2" class="pilcrow">¶</a></p>
@@ -1491,7 +1493,7 @@ The inclusion of two Transfer Initiation Claims in the proposal signals to the r
           <h4 id="name-commit-preparation-message-">
 <a href="#section-4.3.1" class="section-number selfRef">4.3.1. </a><a href="#name-commit-preparation-message-" class="section-name selfRef">Commit Preparation Message (Commit-Prepare)</a>
           </h4>
-<div id="asset-exchange-commit-preparation-message">
+<div id="saep-commit-preparation-message">
 <p id="section-4.3.1-1">The purpose of this message is for the client to indicate its readiness to begin the commitment of the exchange.
 In response to this message, the receiving gateway must lock or otherwise disable the asset in network NW2.<a href="#section-4.3.1-1" class="pilcrow">¶</a></p>
 </div>
@@ -1503,13 +1505,13 @@ In response to this message, the receiving gateway must lock or otherwise disabl
           <h4 id="name-commit-ready-message-commit">
 <a href="#section-4.3.2" class="section-number selfRef">4.3.2. </a><a href="#name-commit-ready-message-commit" class="section-name selfRef">Commit Ready Message (Commit-Ready)</a>
           </h4>
-<div id="asset-exchange-commit-ready">
+<div id="saep-commit-ready">
 <p id="section-4.3.2-1">The purpose of this message is for the server to indicate to the client that the server has locked or otherwise disabled the asset in network NW2 and that the server is ready to proceed to the next step.
 In response to this message, the initiating gateway can perform the assignment of the asset in network NW1 to its designated benficiary.<a href="#section-4.3.2-1" class="pilcrow">¶</a></p>
 </div>
 <p id="section-4.3.2-2">This message is sent from the server to the Commit Ready Endpoint at the client.<a href="#section-4.3.2-2" class="pilcrow">¶</a></p>
 <p id="section-4.3.2-3">The message must be signed by the server.<a href="#section-4.3.2-3" class="pilcrow">¶</a></p>
-<p id="section-4.3.2-4">The asset exchange extension requires the message transmitted in this step to be formatted as a lock-assert-msg instead of following the commit-ready-msg format specified for this step in the asset transfer version of SATP.<a href="#section-4.3.2-4" class="pilcrow">¶</a></p>
+<p id="section-4.3.2-4">The SAE protocol requires the message transmitted in this step to be formatted as a lock-assert-msg instead of following the commit-ready-msg format specified for this step in SATP.<a href="#section-4.3.2-4" class="pilcrow">¶</a></p>
 <p id="section-4.3.2-5">The parameters of this message consist of the following:<a href="#section-4.3.2-5" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-4.3.2-6.1">
@@ -1551,14 +1553,14 @@ In response to this message, the initiating gateway can perform the assignment o
           <h4 id="name-commit-final-assertion-mess">
 <a href="#section-4.3.3" class="section-number selfRef">4.3.3. </a><a href="#name-commit-final-assertion-mess" class="section-name selfRef">Commit Final Assertion Message (Commit-Final)</a>
           </h4>
-<div id="asset-exchange-commit-final-message">
+<div id="saep-commit-final-message">
 <p id="section-4.3.3-1">The purpose of this message is for the client to indicate to the server that the client (initiating gateway) has completed the assignment of the asset in network NW1.<a href="#section-4.3.3-1" class="pilcrow">¶</a></p>
 </div>
 <p id="section-4.3.3-2">The message must contain a standalone claim related to the assignment of the asset by the client.
 The standalone claim must be signed by the client.<a href="#section-4.3.3-2" class="pilcrow">¶</a></p>
 <p id="section-4.3.3-3">This message is sent from the client to the Commit Final Assertion Endpoint at the server.<a href="#section-4.3.3-3" class="pilcrow">¶</a></p>
 <p id="section-4.3.3-4">The message must be signed by the client.<a href="#section-4.3.3-4" class="pilcrow">¶</a></p>
-<p id="section-4.3.3-5">The asset exchange extension requires the message transmitted in this step to be formatted as an ack-commit-final-msg instead of following the commit-final-msg format specified for this step in the asset transfer version of SATP.<a href="#section-4.3.3-5" class="pilcrow">¶</a></p>
+<p id="section-4.3.3-5">The SAE protocol requires the message transmitted in this step to be formatted as an ack-commit-final-msg instead of following the commit-final-msg format specified for this step in SATP.<a href="#section-4.3.3-5" class="pilcrow">¶</a></p>
 <p id="section-4.3.3-6">The parameters of this message consist of the following:<a href="#section-4.3.3-6" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-4.3.3-7.1">
@@ -1596,7 +1598,7 @@ The standalone claim must be signed by the client.<a href="#section-4.3.3-2" cla
           <h4 id="name-commit-final-acknowledgemen">
 <a href="#section-4.3.4" class="section-number selfRef">4.3.4. </a><a href="#name-commit-final-acknowledgemen" class="section-name selfRef">Commit-Final Acknowledgement Receipt Message (ACK-Final-Receipt)</a>
           </h4>
-<div id="asset-exchange-final-ack">
+<div id="saep-final-ack">
 <p id="section-4.3.4-1">The purpose of this message is to indicate to the client that the server has completed the assignment of the asset to the intended beneficiary in network NW2.<a href="#section-4.3.4-1" class="pilcrow">¶</a></p>
 </div>
 <p id="section-4.3.4-2">The reader is directed to <span>[<a href="#SATP" class="cite xref">SATP</a>]</span> for further discussion of the Commit-Final Acknowledgement Receipt Message.<a href="#section-4.3.4-2" class="pilcrow">¶</a></p>
@@ -1607,7 +1609,7 @@ The standalone claim must be signed by the client.<a href="#section-4.3.3-2" cla
           <h4 id="name-transfer-complete-message">
 <a href="#section-4.3.5" class="section-number selfRef">4.3.5. </a><a href="#name-transfer-complete-message" class="section-name selfRef">Transfer Complete Message</a>
           </h4>
-<div id="asset-exchange-transfer-complete-message">
+<div id="saep-transfer-complete-message">
 <p id="section-4.3.5-1">The purpose of this message is for the client to indicate to the server that the asset exchange session (identified by sessionId) has been completed and no further messages are to be expected from the client in regards to this transfer instance.<a href="#section-4.3.5-1" class="pilcrow">¶</a></p>
 </div>
 <p id="section-4.3.5-2">The reader is directed to <span>[<a href="#SATP" class="cite xref">SATP</a>]</span> for further discussion of the Transfer Complete Message.<a href="#section-4.3.5-2" class="pilcrow">¶</a></p>
@@ -1630,7 +1632,7 @@ The standalone claim must be signed by the client.<a href="#section-4.3.3-2" cla
       <h2 id="name-security-considerations">
 <a href="#section-5" class="section-number selfRef">5. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
       </h2>
-<div id="asset-exchange-security-considerations">
+<div id="saep-security-considerations">
 <p id="section-5-1">The reader is directed to <span>[<a href="#SATP" class="cite xref">SATP</a>]</span> for further discussion of security considerations.<a href="#section-5-1" class="pilcrow">¶</a></p>
 </div>
 </section>
@@ -1640,7 +1642,7 @@ The standalone claim must be signed by the client.<a href="#section-4.3.3-2" cla
       <h2 id="name-iana-considerations">
 <a href="#section-6" class="section-number selfRef">6. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
       </h2>
-<div id="asset-exchange-iana-considerations">
+<div id="saep-iana-considerations">
 <p id="section-6-1">This document has no IANA actions.<a href="#section-6-1" class="pilcrow">¶</a></p>
 </div>
 </section>

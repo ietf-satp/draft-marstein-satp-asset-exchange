@@ -1,6 +1,6 @@
-# Secure Asset Transfer Protocol (SATP) Asset Exchange
+# Secure Asset Exchange Protocol
 
-This is the working area for the IETF [SATP Working Group](https://datatracker.ietf.org/wg/satp/documents/) Internet-Draft, "Secure Asset Transfer Protocol (SATP) Asset Exchange".
+This is the working area for the IETF [SATP Working Group](https://datatracker.ietf.org/wg/satp/documents/) Internet-Draft, "Secure Asset Exchange Protocol".
 
 * [Editor's Copy](https://ietf-satp.github.io/draft-marstein-satp-asset-exchange/#go.draft-marstein-satp-asset-exchange.html)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-marstein-satp-asset-exchange)

@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-19T01:48:16.755616+00:00",
+  "timestamp": "2025-10-21T01:40:08.818683+00:00",
   "repo": "ietf-satp/draft-ietf-satp-asset-exchange",
   "labels": [
     {
@@ -123,6 +123,32 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 3,
+      "id": "PR_kwDOPdSz586uuxqh",
+      "title": "Add initial draft",
+      "url": "https://github.com/ietf-satp/draft-ietf-satp-asset-exchange/pull/3",
+      "state": "OPEN",
+      "author": "kemarstein",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-10-20T23:35:43Z",
+      "updatedAt": "2025-10-20T23:35:57Z",
+      "baseRepository": "ietf-satp/draft-ietf-satp-asset-exchange",
+      "baseRefName": "main",
+      "baseRefOid": "b2985671c2b595a4bc354187de1183de33aded6b",
+      "headRepository": "ietf-satp/draft-ietf-satp-asset-exchange",
+      "headRefName": "draft-1",
+      "headRefOid": "fce3fca3ecb373284362173ec78c499e73fc663a",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }

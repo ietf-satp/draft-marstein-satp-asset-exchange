@@ -5,11 +5,11 @@
 Secure Asset Transfer Protocol                               K. Marstein
 Internet-Draft                                                  Cathmere
 Intended status: Informational                                A. Chiriac
-Expires: 23 April 2026                                          L. Riley
+Expires: 24 April 2026                                          L. Riley
                                                            Quant Network
                                                           V. Ramakrishna
                                                             IBM Research
-                                                         20 October 2025
+                                                         21 October 2025
 
 
                      Secure Asset Exchange Protocol
@@ -59,7 +59,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 23 April 2026.
+   This Internet-Draft will expire on 24 April 2026.
 
 Copyright Notice
 

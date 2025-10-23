@@ -1,7 +1,7 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-21T01:40:08.818683+00:00",
-  "repo": "ietf-satp/draft-ietf-satp-asset-exchange",
+  "timestamp": "2025-10-23T01:39:18.809341+00:00",
+  "repo": "ietf-satp/draft-marstein-satp-asset-exchange",
   "labels": [
     {
       "name": "bug",
@@ -55,7 +55,7 @@
       "number": 1,
       "id": "PR_kwDOPdSz586kFcvl",
       "title": "Checking in an initial skeleton of the Secure Asset Exchange Protocol draft",
-      "url": "https://github.com/ietf-satp/draft-ietf-satp-asset-exchange/pull/1",
+      "url": "https://github.com/ietf-satp/draft-marstein-satp-asset-exchange/pull/1",
       "state": "MERGED",
       "author": "VRamakrishna",
       "authorAssociation": "COLLABORATOR",
@@ -64,10 +64,10 @@
       "body": "",
       "createdAt": "2025-08-18T11:12:14Z",
       "updatedAt": "2025-08-18T11:12:56Z",
-      "baseRepository": "ietf-satp/draft-ietf-satp-asset-exchange",
+      "baseRepository": "ietf-satp/draft-marstein-satp-asset-exchange",
       "baseRefName": "main",
       "baseRefOid": "b72d7d4f6f37f772d6f5a838ebb93012a962a8f5",
-      "headRepository": "VRamakrishna/draft-ietf-satp-asset-exchange",
+      "headRepository": null,
       "headRefName": "main",
       "headRefOid": "97d1d753256fc42d74950642634f8ac710e163be",
       "closedAt": "2025-08-18T11:12:55Z",
@@ -83,7 +83,7 @@
       "number": 2,
       "id": "PR_kwDOPdSz586nCT6s",
       "title": "Updated README with appropriate titles and links",
-      "url": "https://github.com/ietf-satp/draft-ietf-satp-asset-exchange/pull/2",
+      "url": "https://github.com/ietf-satp/draft-marstein-satp-asset-exchange/pull/2",
       "state": "MERGED",
       "author": "VRamakrishna",
       "authorAssociation": "COLLABORATOR",
@@ -95,7 +95,7 @@
       "body": "Correcting text in README, which was copied from a different repository earlier.",
       "createdAt": "2025-09-05T12:09:35Z",
       "updatedAt": "2025-09-10T08:30:56Z",
-      "baseRepository": "ietf-satp/draft-ietf-satp-asset-exchange",
+      "baseRepository": "ietf-satp/draft-marstein-satp-asset-exchange",
       "baseRefName": "main",
       "baseRefOid": "689298d08b69c412ed21588225af9077c9f66bba",
       "headRepository": "VRamakrishna/draft-ietf-satp-asset-exchange",
@@ -128,27 +128,51 @@
       "number": 3,
       "id": "PR_kwDOPdSz586uuxqh",
       "title": "Add initial draft",
-      "url": "https://github.com/ietf-satp/draft-ietf-satp-asset-exchange/pull/3",
-      "state": "OPEN",
+      "url": "https://github.com/ietf-satp/draft-marstein-satp-asset-exchange/pull/3",
+      "state": "MERGED",
       "author": "kemarstein",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-10-20T23:35:43Z",
-      "updatedAt": "2025-10-20T23:35:57Z",
-      "baseRepository": "ietf-satp/draft-ietf-satp-asset-exchange",
+      "updatedAt": "2025-10-21T14:52:28Z",
+      "baseRepository": "ietf-satp/draft-marstein-satp-asset-exchange",
       "baseRefName": "main",
       "baseRefOid": "b2985671c2b595a4bc354187de1183de33aded6b",
-      "headRepository": "ietf-satp/draft-ietf-satp-asset-exchange",
+      "headRepository": "ietf-satp/draft-marstein-satp-asset-exchange",
       "headRefName": "draft-1",
-      "headRefOid": "fce3fca3ecb373284362173ec78c499e73fc663a",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
-      "comments": [],
-      "reviews": []
+      "headRefOid": "b8a8b9dec28ad2ac6b03b5db134e9371b8dec161",
+      "closedAt": "2025-10-21T14:51:49Z",
+      "mergedAt": "2025-10-21T14:51:49Z",
+      "mergedBy": "kemarstein",
+      "mergeCommit": {
+        "oid": "00c571f7bdbcd5aa63e51ed4b6ea5a7883330a49"
+      },
+      "comments": [
+        {
+          "author": "VRamakrishna",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@kemarstein Can you amend your commit with a GPG signature (I'd added a signature verification requirement to the branch protection rule for `main`). I think `git commit --amend -S` should do it from the command line (after you've configured your GPG keys).",
+          "createdAt": "2025-10-21T06:56:57Z",
+          "updatedAt": "2025-10-21T06:56:57Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOPdSz587INiX3",
+          "commit": {
+            "abbreviatedOid": "b8a8b9d"
+          },
+          "author": "VRamakrishna",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "LGTM.",
+          "createdAt": "2025-10-21T06:55:22Z",
+          "updatedAt": "2025-10-21T14:49:13Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }

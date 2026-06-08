@@ -93,7 +93,7 @@ informative:
     - ins: A. Lipton
     - ins: A. Pentland
     date: June 2019
-    target: https://doi:10.1109/TEM.2019.2920154
+    target: https://doi.org/10.1109/TEM.2019.2920154
     title: Towards an Interoperability Architecture for Blockchain Autonomous Systems, IEEE Transactions on Engineering Management
   HS2019:
     author:
@@ -127,9 +127,9 @@ normative:
   ISO:
     author:
     - ins: ISO
-    date: July 2020
+    date: January 2024
     target: https://www.iso.org/standard/82208.html
-    title: Blockchain and distributed ledger technologies-Vocabulary (ISO:22739:2020)
+    title: Blockchain and distributed ledger technologies — Vocabulary (ISO:22739:2024)
   NIST:
     author:
     - ins: D. Yaga
@@ -161,17 +161,17 @@ normative:
     - ins: R. Belchior
     - ins: V. Ramakrishna
     - ins: A. Chiriac
-    date: August 2025
-    target: https://datatracker.ietf.org/doc/draft-ietf-satp-core/
-    title: Secure Asset Transfer Protocol (SATP) Core, IETF, draft-ietf-satp-core-11
+    date: March 2026
+    target: https://datatracker.ietf.org/doc/draft-ietf-satp-core/13/
+    title: Secure Asset Transfer Protocol (SATP) Core, IETF, draft-ietf-satp-core-13
   SATU:
     author:
     - ins: V. Ramakrishna
     - ins: T. Hardjono
     - ins: C. Liu
-    date: July 2025
-    target: https://datatracker.ietf.org/doc/draft-ietf-satp-usecases/
-    title: Secure Asset Transfer (SAT) Use Cases, IETF, draft-ietf-satp-usecases-06
+    date: June 2026
+    target: https://datatracker.ietf.org/doc/draft-ietf-satp-usecases/09/
+    title: Secure Asset Transfer (SAT) Use Cases, IETF, draft-ietf-satp-usecases-09
 
 --- abstract
 

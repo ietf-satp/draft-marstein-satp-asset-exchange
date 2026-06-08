@@ -231,7 +231,7 @@ This document presents the modifications necessary to the SATP message flows and
 The asset exchange protocol inherits the SATP model and behavior where not otherwise stated.
 The reader is directed to {{SATP}} for further discussion of SATP and non-modified behavior.
 
-While several variations of the message flows can be used to support a gateway-to-gateway asset exchange protcol, a conscious design choice is to diverge as little as possible from the asset transfer version of SATP by reusing established definitions, semantics, and security guarantees where possible.
+While several variations of the message flows can be used to support a gateway-to-gateway asset exchange protocol, a conscious design choice is to diverge as little as possible from the asset transfer version of SATP by reusing established definitions, semantics, and security guarantees where possible.
 This allows the protocol to leverage the progress of SATP and simplifies integration with existing SATP compliant systems.
 
 The gateway referred to as the "sender gateway" in SATP takes on the role as "initiating" gateway of the asset exchange, and the gateway referred to as the "recipient gateway" takes on the role as "receiving" gateway, referring to each gateway's role in initiating the exchange.
@@ -300,8 +300,8 @@ Stage-2 flows cover the conveyance of the signed assertion pertaining to the ass
 
 If the signed assertion conveyed by gateway G1 in Stage-2 is accepted by gateway G2, it must in return initiate Stage-3 and transmit a signed receipt to gateway G1 that it has correctly locked the asset in network NW2 connected to gateway G2.
 
-The remaining Stage-3 flows commit gateways G1 and G2 to assigning the locked assets to their respective benficiaries.
-The initiating gateway G1 must assign (unlock) the asset in network NW1 to the correct benficiary in network NW1 and gateway G2 must assign (unlock) the asset in network NW2 to the correct beneficiary in network NW2.
+The remaining Stage-3 flows commit gateways G1 and G2 to assigning the locked assets to their respective beneficiaries.
+The initiating gateway G1 must assign (unlock) the asset in network NW1 to the correct beneficiary in network NW1 and gateway G2 must assign (unlock) the asset in network NW2 to the correct beneficiary in network NW2.
 
 ```
        App1  NW1          G1                     G2          NW2    App2
@@ -395,7 +395,7 @@ The reader is directed to {{SATP}} for further discussion of the Commit Preparat
 
 {: #saep-commit-ready}
 The purpose of this message is for the server to indicate to the client that the server has locked or otherwise disabled the asset in network NW2 and that the server is ready to proceed to the next step.
-In response to this message, the initiating gateway can perform the assignment of the asset in network NW1 to its designated benficiary.
+In response to this message, the initiating gateway can perform the assignment of the asset in network NW1 to its designated beneficiary.
 
 This message is sent from the server to the Commit Ready Endpoint at the client.
 

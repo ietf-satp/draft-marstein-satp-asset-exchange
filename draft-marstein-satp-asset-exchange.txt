@@ -5,11 +5,11 @@
 Secure Asset Transfer Protocol                               K. Marstein
 Internet-Draft                                                  Cathmere
 Intended status: Informational                                A. Chiriac
-Expires: 24 April 2026                                          L. Riley
+Expires: 10 December 2026                                       L. Riley
                                                            Quant Network
                                                           V. Ramakrishna
                                                             IBM Research
-                                                         21 October 2025
+                                                             8 June 2026
 
 
                      Secure Asset Exchange Protocol
@@ -59,11 +59,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 24 April 2026.
+   This Internet-Draft will expire on 10 December 2026.
 
 Copyright Notice
 
-   Copyright (c) 2025 IETF Trust and the persons identified as the
+   Copyright (c) 2026 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -179,7 +179,7 @@ Table of Contents
    [SATP] for further discussion of SATP and non-modified behavior.
 
    While several variations of the message flows can be used to support
-   a gateway-to-gateway asset exchange protcol, a conscious design
+   a gateway-to-gateway asset exchange protocol, a conscious design
    choice is to diverge as little as possible from the asset transfer
    version of SATP by reusing established definitions, semantics, and
    security guarantees where possible.  This allows the protocol to
@@ -293,10 +293,11 @@ Table of Contents
    in network NW2 connected to gateway G2.
 
    The remaining Stage-3 flows commit gateways G1 and G2 to assigning
-   the locked assets to their respective benficiaries.  The initiating
+   the locked assets to their respective beneficiaries.  The initiating
    gateway G1 must assign (unlock) the asset in network NW1 to the
-   correct benficiary in network NW1 and gateway G2 must assign (unlock)
-   the asset in network NW2 to the correct beneficiary in network NW2.
+   correct beneficiary in network NW1 and gateway G2 must assign
+   (unlock) the asset in network NW2 to the correct beneficiary in
+   network NW2.
 
    App1 NW1 G1 G2 NW2 App2
    ..|.....|............|......................|............|.....|..
@@ -314,12 +315,12 @@ Table of Contents
    ..|.....|............|......................|............|.....|..
     | | | Stage 3 | | | | | | | | | | | (3.1)|----Commit
    Prepare--->| | | | | | | | | | | |
-   (3.2)|----Lock--->| | | | | | | | | | |<----Commit Ready-----
-   |(3.3) | | | | | | | | | |<--Assign---|(3.4) | | | | | | | | | | |
+   (3.2)|----Lock--->| | | | | | | | | | |<----Commit
+   Ready-----|(3.3) | | | | | | | | | |<--Assign---|(3.4) | | | | | | | | | | |
    (3.5)|-----Commit Final---->| | | | | | | | | | | |
-   (3.6)|---Assign-->| | | | | | | | | | |<-----ACK Final-------
-   |(3.7) | | | | | | | | | | | | | | | |<--Record---
-   |(3.8) | | | | | | | | | | | (3.9)|--Transfer Complete-->| | |
+   (3.6)|---Assign-->| | | | | | | | | | |<-----ACK
+   Final-------|(3.7) | | | | | | | | | | | | | | | |<--Record---|(3.8) | | | | | | | | | | |
+   (3.9)|--Transfer Complete-->| | |
    ..|.....|............|......................|............|.....|..
    Figure 2
 
@@ -378,7 +379,7 @@ Table of Contents
    client that the server has locked or otherwise disabled the asset in
    network NW2 and that the server is ready to proceed to the next step.
    In response to this message, the initiating gateway can perform the
-   assignment of the asset in network NW1 to its designated benficiary.
+   assignment of the asset in network NW1 to its designated beneficiary.
 
    This message is sent from the server to the Commit Ready Endpoint at
    the client.
@@ -506,8 +507,8 @@ Table of Contents
 
 7.1.  Normative References
 
-   [ISO]      ISO, "Blockchain and distributed ledger technologies-
-              Vocabulary (ISO:22739:2020)", July 2020,
+   [ISO]      ISO, "Blockchain and distributed ledger technologies —
+              Vocabulary (ISO:22739:2024)", January 2024,
               <https://www.iso.org/standard/82208.html>.
 
    [MICA]     European Commission, "EU Directive on Markets in Crypto-
@@ -534,13 +535,14 @@ Table of Contents
 
    [SATP]     Hargreaves, M., Hardjono, T., Belchior, R., Ramakrishna,
               V., and A. Chiriac, "Secure Asset Transfer Protocol (SATP)
-              Core, IETF, draft-ietf-satp-core-11", August 2025,
-              <https://datatracker.ietf.org/doc/draft-ietf-satp-core/>.
+              Core, IETF, draft-ietf-satp-core-13", March 2026,
+              <https://datatracker.ietf.org/doc/draft-ietf-satp-
+              core/13/>.
 
    [SATU]     Ramakrishna, V., Hardjono, T., and C. Liu, "Secure Asset
               Transfer (SAT) Use Cases, IETF, draft-ietf-satp-usecases-
-              06", July 2025, <https://datatracker.ietf.org/doc/draft-
-              ietf-satp-usecases/>.
+              09", June 2026, <https://datatracker.ietf.org/doc/draft-
+              ietf-satp-usecases/09/>.
 
 7.2.  Informative References
 
@@ -563,7 +565,7 @@ Table of Contents
    [HLP19]    Hardjono, T., Lipton, A., and A. Pentland, "Towards an
               Interoperability Architecture for Blockchain Autonomous
               Systems, IEEE Transactions on Engineering Management",
-              June 2019, <https://doi:10.1109/TEM.2019.2920154>.
+              June 2019, <https://doi.org/10.1109/TEM.2019.2920154>.
 
    [HS2019]   Hardjono, T. and N. Smith, "Decentralized Trusted
               Computing Base for Blockchain Infrastructure Security,

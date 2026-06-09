@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-06-07T04:08:05.754248+00:00",
+  "timestamp": "2026-06-09T03:40:52.582746+00:00",
   "repo": "ietf-satp/draft-marstein-satp-asset-exchange",
   "labels": [
     {
@@ -170,6 +170,48 @@
           "body": "LGTM.",
           "createdAt": "2025-10-21T06:55:22Z",
           "updatedAt": "2025-10-21T14:49:13Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "id": "PR_kwDOPdSz587jwUTq",
+      "title": "Update references and typos in initial draft",
+      "url": "https://github.com/ietf-satp/draft-marstein-satp-asset-exchange/pull/4",
+      "state": "MERGED",
+      "author": "kemarstein",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-06-08T04:29:10Z",
+      "updatedAt": "2026-06-08T18:59:07Z",
+      "baseRepository": "ietf-satp/draft-marstein-satp-asset-exchange",
+      "baseRefName": "main",
+      "baseRefOid": "00c571f7bdbcd5aa63e51ed4b6ea5a7883330a49",
+      "headRepository": "ietf-satp/draft-marstein-satp-asset-exchange",
+      "headRefName": "draft-1-update",
+      "headRefOid": "838cfefe4820ef7dc51224164cfac9928e334925",
+      "closedAt": "2026-06-08T18:59:02Z",
+      "mergedAt": "2026-06-08T18:59:02Z",
+      "mergedBy": "VRamakrishna",
+      "mergeCommit": {
+        "oid": "19ba84926acfe714fbbc61c9e542002be58d39bd"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOPdSz588AAAABCWRsZg",
+          "commit": {
+            "abbreviatedOid": "838cfef"
+          },
+          "author": "VRamakrishna",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "LGTM",
+          "createdAt": "2026-06-08T18:58:38Z",
+          "updatedAt": "2026-06-08T18:58:38Z",
           "comments": []
         }
       ]
